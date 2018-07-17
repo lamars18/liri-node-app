@@ -12,9 +12,11 @@ var twitter = require("twitter");
 var request = require("request");
 var fs = require("fs");
 var Spotify = require('node-spotify-api');
+omdb = require('omdbapi');
 
 var spotify = new Spotify(keys.spotify)
 var client = new twitter(keys.twitter);
+
 
 //Retrieves response for tweets and displays in console
 var app = {
@@ -76,7 +78,7 @@ var app = {
     //Retrieves response for movies,
     //Displays response for specified search if no movie is specified
     // Specifies how response is to be displayed in console
-    request('http://www.omdbapi.com/?t=' + (query || 'Mr. Nobody') +'&tomatoes=true', function (error, response, info) {
+    request('http://www.omdbapi.com/?t=' + (query || 'Mr. Nobody') +'&tomatoes=true' + '&apikey=trilogy', function (error, response, info) {
       if (!error && response.statusCode == 200) {
 
         var movieData = JSON.parse(info);
