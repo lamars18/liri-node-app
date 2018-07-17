@@ -92,7 +92,7 @@ var app = {
         console.log('Language: ' + movieData.Language);
         console.log('Plot: ' + movieData.Plot);
         console.log('Actors: ' + movieData.Actors);
-        console.log('Rotten Tomatoes Rating: ' + movieData.tomatoRating);
+        console.log('Rotten Tomatoes Rating: ' + movieData.Ratings[1].Value);
         console.log('Rotten Tomatoes URL: ' + movieData.tomatoURL);
         console.log('===========================================');
         console.log(' ');
