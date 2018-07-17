@@ -36,7 +36,7 @@ var app = {
     });
   },
   "spotify-this-song": function(keyword) {
-    spotify.search({ type: 'track', query: keyword || 'The Sign Ace of Base' }, function(err, data) {
+    spotify.search({ type: 'track', query: keyword || 'Rolling in the Deep' }, function(err, data) {
       if ( err ) {
           console.log('Error occurred: ' + err);
           return;
@@ -64,7 +64,7 @@ var app = {
     });
   },
   "movie-this": function(query) {
-    request('http://www.omdbapi.com/?t=' + (query || 'Mr.Nobody') +'&tomatoes=true', function (error, response, info) {
+    request('http://www.omdbapi.com/?t=' + (query || 'Ms. Doubtfire') +'&tomatoes=true', function (error, response, info) {
       if (!error && response.statusCode == 200) {
 
         var movieData = JSON.parse(info);
